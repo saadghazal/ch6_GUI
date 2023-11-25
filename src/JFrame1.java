@@ -19,6 +19,13 @@ public class JFrame1 extends JFrame {
         JLabel label3 = new JLabel("Center Aligned Label",SwingConstants.CENTER); // Creating The Center Aligned Label
         jFrameContent.add(label3); // Adding The Center Aligned Label
 
+        JTextField newTextField = new JTextField("Ghazal"); // Creating Text Field with Default Value Equals Ghazal
+
+        jFrameContent.add(newTextField);
+
+
+
+
         setContentPane(jFrameContent); // setting the new modification to the JFrame Container
     }
 
