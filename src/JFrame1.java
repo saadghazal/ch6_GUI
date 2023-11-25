@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class JFrame1 extends JFrame {
 
@@ -25,10 +27,22 @@ public class JFrame1 extends JFrame {
 
         JButton newButton = new JButton("Python Button"); // Creating JButton With Title
 
+        ButtonPressedEventListener pressingEvent = new ButtonPressedEventListener(); // Creating object of actionListener class that we created
+
+        newButton.addActionListener(pressingEvent); // passing the object to the button to make the button listening to the object
+
         jFrameContent.add(newButton); // adding the button to the container
 
 
         setContentPane(jFrameContent); // setting the new modification to the JFrame Container
+    }
+    private static class ButtonPressedEventListener implements ActionListener{ // creating eventListener class the implements the ActionListener class
+
+        @Override
+        public void actionPerformed(ActionEvent e) { // actionPerformed is a function inside the ActionListener that we should override
+            // inside this function will do anything when the user click the button
+            System.out.println("Ghazal is good");
+        }
     }
 
     public static void main(String[] args) {
